@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ Cá Nhân - Student Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo"><i class="fa-solid fa-code"></i> MyPortfolio</a>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home" class="active"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
+                    <li><a href="#profile"><i class="fa-solid fa-user"></i> Cá nhân</a></li>
+                    <li class="dropdown">
+                        <a href="#exercises" class="dropdown-btn"><i class="fa-solid fa-folder-open"></i> Bài tập <i class="fa-solid fa-chevron-down dropdown-icon"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="baitap38.html"><i class="fa-solid fa-file-code"></i> Bài tập 38</a></li>
+                            <li><a href="baitap39.html"><i class="fa-solid fa-file-code"></i> Bài tập 39</a></li>
+                            <li><a href="index.html"><i class="fa-solid fa-gamepad"></i> Mini Game Web</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero / Profile Section -->
+    <section id="home" class="hero-section">
+        <div class="container hero-container">
+            <div class="avatar-card">
+                <div class="avatar-wrapper">
+                    <img src="avatar.jpg" alt="Ảnh đại diện" id="userAvatar">
+                </div>
+                <div class="status-badge"><i class="fa-solid fa-circle"></i> Sinh viên</div>
+            </div>
+            <div class="profile-info" id="profile">
+                <span class="sub-title">XIN CHÀO! TÔI LÀ</span>
+                <h1 class="student-name">NGUYỄN MINH LUÂN</h1>
+                <div class="info-card">
+                    <p class="student-id"><i class="fa-solid fa-id-card"></i> <strong>MSSV:</strong> <span>241A010518</span></p>
+                    <p class="student-major"><i class="fa-solid fa-graduation-cap"></i> <strong>Ngành:</strong> Công nghệ Thông tin</p>
+                    <p class="student-class"><i class="fa-solid fa-users"></i> <strong>Lớp:</strong> K24-CNTT</p>
+                </div>
+                
+                <p class="bio">
+                    CHÚC MỘT NGÀY TỐT LÀNH! TRANG WEB CÁ NHÂN TRƯNG BÀY CÁC BÀI TẬP 38, BÀI 39, VÀ MINI GAME WEB
+                </p>
+
+                <div class="cta-buttons">
+                    <a href="#exercises" class="btn btn-primary"><i class="fa-solid fa-list-check"></i> Xem danh sách bài tập</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exercises Section -->
+    <section id="exercises" class="exercises-section">
+        <div class="container">
+            <h2 class="section-title">Danh Sách Bài Tập</h2>
+            <p class="section-subtitle">Truy cập nhanh đến các bài thực hành đã hoàn thành</p>
+
+            <div class="exercise-grid">
+                <!-- Card Bài tập 38 -->
+                <div class="ex-card">
+                    <div class="ex-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>Bài Tập 38</h3>
+                    <p>Bài thực hành nâng cao kết hợp HTML, CSS và xử lý giao diện cơ bản.</p>
+                    <a href="baitap38.html" class="ex-link">Đi đến bài tập <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Card Bài tập 39 -->
+                <div class="ex-card">
+                    <div class="ex-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3>Bài Tập 39</h3>
+                    <p>Tương tác người dùng và xử lý dữ liệu động bằng JavaScript.</p>
+                    <a href="baitap39.html" class="ex-link">Đi đến bài tập <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Card Mini Game Web -->
+                <div class="ex-card highlight">
+                    <div class="ex-icon"><i class="fa-solid fa-gamepad"></i></div>
+                    <h3>Mini Game Web</h3>
+                    <p>Trò chơi nhỏ tương tác trực tiếp trên trình duyệt web.</p>
+                    <a href="index.html" class="ex-link">Chơi ngay <i class="fa-solid fa-play"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p> 2026 Nguyễn Minh Luân</p>
+        </div>
+    </footer>
+
+    <script src="choi2.js"></script>
+</body>
+</html>

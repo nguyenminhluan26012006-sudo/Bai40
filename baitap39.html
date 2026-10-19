@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập 39 - Đèn Kéo Quân 3D</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 800px;
+            flex: 1;
+        }
+
+        /* Khối Đèn Kéo Quân 3D */
+        .lantern-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            perspective: 1000px;
+            height: 400px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .scene {
+            width: 200px;
+            height: 250px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotateLantern 12s linear infinite;
+            animation-play-state: running;
+        }
+
+        .scene.paused {
+            animation-play-state: paused;
+        }
+
+        .carousel {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+        }
+
+        .carousel__face {
+            position: absolute;
+            width: 180px;
+            height: 230px;
+            left: 10px;
+            top: 10px;
+            border: 2px solid #ffd700;
+            border-radius: 10px;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.6);
+            box-shadow: inset 0 0 15px rgba(255, 215, 0, 0.5);
+            cursor: pointer;
+        }
+
+        .carousel__face img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+
+        .carousel__face:nth-child(1) { transform: rotateY(0deg) translateZ(173px); }
+        .carousel__face:nth-child(2) { transform: rotateY(60deg) translateZ(173px); }
+        .carousel__face:nth-child(3) { transform: rotateY(120deg) translateZ(173px); }
+        .carousel__face:nth-child(4) { transform: rotateY(180deg) translateZ(173px); }
+        .carousel__face:nth-child(5) { transform: rotateY(240deg) translateZ(173px); }
+        .carousel__face:nth-child(6) { transform: rotateY(300deg) translateZ(173px); }
+
+        @keyframes rotateLantern {
+            from { transform: rotateY(0deg); }
+            to { transform: rotateY(-360deg); }
+        }
+
+        .lantern-title {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #ffd700;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        }
+
+        .lantern-hint {
+            margin-top: 8px;
+            font-size: 0.85rem;
+            color: #ddd;
+            font-style: italic;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #fff;
+            background: #00b894;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .back-btn:hover {
+            background: #55efc4;
+            transform: translateY(-3px);
+            color: #000;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bài Tập 39</h1>
+        <p>Mô hình Đèn Kéo Quân 3D</p>
+    </header>
+
+    <div class="main-container">
+        <div class="lantern-section">
+            <div class="scene" id="lanternScene"
+                 onmouseenter="pauseLantern()"
+                 onmouseleave="resumeLantern()">
+                <div class="carousel">
+                    <div class="carousel__face"><img src="images/anh1.jpg" alt="Mặt 1"></div>
+                    <div class="carousel__face"><img src="images/anh2.jpg" alt="Mặt 2"></div>
+                    <div class="carousel__face"><img src="images/anh3.jpg" alt="Mặt 3"></div>
+                    <div class="carousel__face"><img src="images/anh4.jpg" alt="Mặt 4"></div>
+                    <div class="carousel__face"><img src="images/anh5.jpg" alt="Mặt 5"></div>
+                    <div class="carousel__face"><img src="images/anh6.jpg" alt="Mặt 6"></div>
+                </div>
+            </div>
+            <div class="lantern-title">Đèn Kéo Quân 6 Mặt Xoay Vòng Tròn</div>
+            <div class="lantern-hint">💡 Rê chuột vào đèn để dừng lại, rê ra ngoài để quay tiếp</div>
+        </div>
+        <a href="bai38.html" class="back-btn">📁 Xem Kết Quả Bài Tập 38</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Thiết kế giao diện HTML/CSS/JS</p>
+    </footer>
+
+    <script>
+        var scene = document.getElementById("lanternScene");
+
+        function pauseLantern() {
+            scene.classList.add("paused");
+        }
+
+        function resumeLantern() {
+            scene.classList.remove("paused");
+        }
+    </script>
+
+</body>
+</html>

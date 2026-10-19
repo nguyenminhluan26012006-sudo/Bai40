@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập 38 - Kết Quả</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 800px;
+            flex: 1;
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            width: 100%;
+            text-align: center;
+        }
+
+        .content-section h2 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            padding-bottom: 10px;
+        }
+
+        .result-box {
+            margin-top: 15px;
+            display: block;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px dashed #ffd700;
+        }
+
+        .result-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            max-height: 350px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #fff;
+            background: #ff5e62;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .back-btn:hover {
+            background: #ff9966;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bài Tập 38</h1>
+        <p>Trang hiển thị kết quả thực hành</p>
+    </header>
+
+    <div class="main-container">
+        <div class="content-section">
+            <h2>Kết Quả Chi Tiết</h2>
+            <div class="result-box">
+                <img src="images/bai_tap_38.jpg" alt="Kết quả Bài tập 38">
+                <p style="font-size: 0.95rem; margin-top: 10px; color: #ffd700;">Kết quả Bài tập 38</p>
+            </div>
+            <a href="bai39.html" class="back-btn">🏮 Chuyển sang Đèn Kéo Quân (Bài 39)</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Thiết kế giao diện HTML/CSS/JS</p>
+    </footer>
+
+</body>
+</html>
